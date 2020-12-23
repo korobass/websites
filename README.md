@@ -16,12 +16,14 @@ Static websites hosted on S3 using CloudFront and lambda@edge
 
 By default it is using local states
 
-terraform apply -auto-approve -var aws_role=your_iam_role_name
+    cd websites
+    terraform init
+    terraform apply -auto-approve -var aws_role=your_iam_role_name
 
 ## Example usage using Cloudfront URL
 
-curl -v https://cf-distribution/
-curl -v https://cf-distribution/kitten_web
+    curl -v https://cf-distribution/
+    curl -v https://cf-distribution/kitten_web
 
 ## Reference documentation
 
