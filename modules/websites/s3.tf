@@ -2,15 +2,6 @@ resource "aws_s3_bucket" "s3_bucket" {
   bucket             = var.s3_bucket_name
   tags               = var.s3_tags
 
-//  website {
-//    index_document    = var.bucket_index_document
-//    error_document    = var.bucket_error_document
-//  }
-
-//  logging {
-//    target_bucket     = aws_s3_bucket.site_log_bucket.id
-//  }
-
   versioning {
     enabled          = var.bucket_versioning
   }
