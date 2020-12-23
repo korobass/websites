@@ -8,9 +8,15 @@ Static websites hosted on S3 using CloudFront and lambda@edge
 * cloudfront distribution with basic WAF ACLs
 * Lambda@Edge triggered by Cloudfront events 
 * optionally Route53 custom domain for CF
-* dynamodb table
+* dynamodb table with read/write capacity autoscaling
 * IAM role to provide access to dynamodb table
 * optinonally example kitten_web website
+
+## Terraform workspace creation
+
+By default it is using local states
+
+terraform apply -auto-approve -var aws_role=your_iam_role_name
 
 ## Example usage using Cloudfront URL
 
